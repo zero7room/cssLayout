@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>水平居中</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0；
+        }
+        .container{
+            width: 200px;
+            height: 200px;
+            background: yellow;
+        }
+        .details {
+            height: 100px;
+            width: 100px;
+            background: green;
+        }
+        .o1 {
+            text-align: center;
+        }
+        .i1 {
+            display: inline-block;
+        }
+
+        .i2 {
+            display: table;
+            margin: 0 auto;
+        }
+
+        .o3 {
+            position: relative;
+        }
+        .i3 {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%)
+        }
+        .o4{
+            display: flex;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+    <hr/>
+    <p>text-align: center</p>
+    <div class="container o1">
+        <div class="details i1">
+
+        </div>
+    </div>
+    <hr/>
+    <p>table + margin</p>
+    <div class="container o2">
+        <div class="details i2">
+
+        </div>
+    </div>
+    <hr/>
+    <p>absolute + transform</p>
+    <div class="container o3">
+        <div class="details i3">
+
+        </div>
+    </div>
+    <hr/>
+    <p>flex + just-content</p>
+    <div class="container o4">
+        <div class="details i4">
+
+        </div>
+    </div>
+</body>
+</html>

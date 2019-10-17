@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>三栏布局的5种解决方案</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            min-height: 200px;
+            background: gray;
+            width: 100%;
+        }
+        .right{
+            background: yellow;
+            height: 200px;
+            width: 200px;
+        }
+        .left{
+            background: green;
+            height: 200px;
+            width: 200px;
+        }
+        .center{
+            background: rgb(0, 255, 200);
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <style>
+        .float .left{
+            float: left;
+        }
+        .float .right{
+            float: right;
+        }
+    </style>
+    <section class="container float">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="center">
+            float实现3栏布局
+        </div>
+    </section>
+    <hr/>
+    <style>
+        .absolute{
+            position: relative;
+        }
+        .absolute .left{
+            position: absolute;
+            left: 0px;
+        }
+        .absolute .right{
+            position: absolute;
+            right: 0px;
+        }
+        .absolute .center{
+            position: absolute;
+            left: 200px;
+            right: 200px;
+        }
+    </style>
+    <section class="container absolute">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="center">
+            absolute实现3栏布局
+        </div>
+    </section>
+    <hr/>
+    <style>
+        .table{
+            display: table;
+        }
+        .table>div{
+            display:table-cell;
+        }
+        .table>center{
+            width: 100%;
+        }
+    </style>
+    <section class="container table">
+        <div class="left"></div>
+        <div class="center">
+            table实现3栏布局
+        </div>
+        <div class="right"></div>
+    </section>
+    <hr/>
+    <style>
+        .flex{
+            display: flex;
+        }
+        .flex .center{
+            flex: 1;
+        }
+    </style>
+    <section class="container flex">
+        <div class="left"></div>
+        <div class="center">
+            flex实现3栏布局
+        </div>
+        <div class="right"></div>
+    </section>
+    <hr/>
+    <style>
+        .gird{
+            display: grid;
+            grid-template-columns: 200px auto 200px;
+            /* grid-template-rows: 100px 100px 100px; */
+        }
+        .gird .item1{
+            background: green
+        }
+        .gird .item3{
+            background: yellow
+        }
+        .gird .item2{
+            background: rgb(0, 255, 200);
+        }
+    </style>
+    <section class="container gird">
+        <div class="item1"></div>
+        <div class="item2">
+            gird实现3栏布局
+        </div>
+        <div class="item3"></div>
+    </section>
+</body>
+</html>
