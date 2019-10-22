@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container{
+            padding-left: 220px;
+            padding-right: 220px;
+            min-width: 600px;
+            overflow: hidden;
+        }
+        .left{
+            float: left;
+            width: 200px;
+            height: 400px;
+            background: red;
+            margin-left: -100%;
+            position: relative;
+            left: -220px;
+        }
+        .center{
+            float: left;
+            width: 100%;
+            background: yellow;
+            height: 500px;
+        }
+        /* .center .inner {
+            margin: 0 200px;
+            height: 500px;
+            background: yellow;
+        } */
+        .right{
+            float: left;
+            width: 200px;
+            height: 400px;
+            background: blue;
+            margin-left: -200px;
+            position: relative;
+            right: -220px;
+        }
+        .center .inner,
+        .left,
+        .right {
+            padding-bottom: 10000px;
+            margin-bottom: -10000px;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <aside class="center">
+            圣杯布局
+        </aside>
+        <aside class="left"></aside>
+        <aside class="right"></aside>
+    </section>
+</body>
+</html>

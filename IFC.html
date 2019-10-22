@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .warp {
+            border: 1px solid red;
+            display: inline-block;
+        }
+
+        .text {
+            margin: 20px;
+            background: green;
+        }
+    </style>
+    <!-- 左右margin撑开，上下margin并未撑开，符合IFC规范，只计算横向样式控件，不计算纵向样式空间。 -->
+    <div class="warp">
+        <span class="text">文本一</span>
+        <span class="text">文本二</span>
+    </div>
+
+
+    <hr>
+
+
+    <style>
+        .warp2 {
+            border: 1px solid red;
+            width: 200px;
+            text-align: center;
+        }
+
+        .text2 {
+            background: green;
+        }
+    </style>
+    <!-- 水平排列规则根据IFC容器的text-align值来排列，可以用来实现多个子元素的水平居中。 -->
+    <div class="warp2">
+        <span class="text2">文本一</span>
+        <span class="text2">文本二</span>
+    </div>
+
+
+    <hr>
+
+
+    <style>
+        .warp3 {
+            border: 1px solid red;
+            width: 200px;
+        }
+
+        .text3 {
+            background: green;
+        }
+
+        .f-l {
+            float: left;
+        }
+    </style>
+    <!-- IFC中具备float属性值的元素优先排列，在很多场景中用来在文章段落开头添加“tag”可以用到 -->
+    <div class="warp3">
+        <span class="text3">这是文本1</span>
+        <span class="text3">这是文本2</span>
+        <span class="text3 f-l">这是文本3</span>
+        <span class="text3">这是文本4</span>
+    </div>
+
+
+
+    <p>111<div>222</div>333</p>
+    <hr>
+    <p>
+        <span>000</span>
+        2222
+        <div>1111</div>
+        3333
+        <span>444</span>
+    </p>
+    <!-- 利用IFC还可以做很多其他的事情，例如：解决元素垂直居中、多个文本元素行高不一致排列混乱。 -->
+</body>
+
+</html>

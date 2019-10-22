@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .demo1{
+            width: 200px;
+            height: 200px;
+            border-top: 200px solid red;
+            border-bottom: 200px solid transparent;
+            border-left: 200px solid transparent;
+            border-right: 200px solid transparent;
+            border-radius: 400px;
+        }
+        .demo1::before{
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 93px;
+            left: 180px;
+            border-radius: 20px;
+            background-color: yellow;
+        }
+        .demo1::after{
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 93px;
+            left: 420px;
+            border-radius: 20px;
+            background-color: green;
+        }
+        .text{
+            font-size: 49px;
+            position: relative;
+            top: -137px;
+            left: 4px;
+        }
+    </style>
+    <div class="demo1">
+        <span class="text">
+            福星高照
+        </span>
+    </div>
+</body>
+</html>
